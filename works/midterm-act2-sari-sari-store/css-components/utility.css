@@ -1,0 +1,12 @@
+.category__spacer{
+    padding-bottom: 2.875rem;
+}
+
+.bottom-spacer{
+    padding-bottom: 4rem;
+}
+
+.wrap-2{
+    display: flex;
+    justify-content: space-between;
+}

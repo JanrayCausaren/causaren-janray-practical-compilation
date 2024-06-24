@@ -1,0 +1,95 @@
+.form__header {
+    padding-bottom: 2rem;
+
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .50rem;
+}
+
+.form__title {
+    font-size: 1.125rem;
+    color: var(--clr-primary-dark-blue);
+    font-weight: 600;
+    padding-bottom: .75rem;
+}
+
+.content {
+    position: relative;
+    background: white;
+    padding: 3rem 1rem 1rem;
+    border-radius: 5px;
+}
+
+.content *{
+    color: var(--clr-primary-accent-blue);
+}
+
+.btnClose {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.form__spacer {
+    padding-bottom: 1rem;
+}
+
+.label__input {
+    font-size: 0.875rem;
+}
+
+.input__box {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+.input__container {
+    padding-block: .75rem;
+    border: 1px solid var(--clr-neutral-grey-light);
+    border-radius: 5px;
+    padding-inline: 1rem;
+}
+
+.loginBtn {
+    background-color: var(--clr-primary-accent-blue);
+    color: white;
+    padding: .75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.form__root {
+    display: none;
+}
+
+.signIn__overlay {
+    position: fixed;
+    background-color: rgb(41, 37, 37);
+    opacity: 0;
+    inset: 0;
+    z-index: 3;
+    transition: opacity 300ms ease-in-out;
+}
+
+.signIn__content {
+    position: fixed;
+    z-index: 5;
+    inset: 0;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}

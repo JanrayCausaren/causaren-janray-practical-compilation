@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Crave</title>
+    <link rel="stylesheet" href="css-components/global.css">
+    <link rel="stylesheet" href="css-components/index-css-components/header.css">
+    <link rel="stylesheet" href="css-components/index-css-components/main.css">
+    <link rel="stylesheet" href="css-components/index-css-components/utility.css">
+    <link rel="stylesheet" href="css-components/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="#">
+                    <img src="assets/images/icons/logo.svg" alt="logo">
+                </a>
+                <div class="wrap">
+                    <nav class="header__navigation">
+                        <ul class="navigation__list navigation__wrapper">
+                            <li class="navigation__item" role="list"><a href="#">Home</a></li>
+                            <li class="navigation__item" role="list"><a href="index.html#about">About</a></li>
+                            <li class="navigation__item" role="list"><a href="menu.html">Menu</a></li>
+                            <li class="navigation__item" role="list"><a href="#menu__section">Location</a></li>
+                        </ul>
+                    </nav>
+                    <button class="btn__cart" id="openCart" aria-expanded="false">
+                        <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.156 4.55125H4.82848L4.51223 1.02C4.48724 0.741262 4.35881 0.481977 4.15221 0.293197C3.94562 0.104417 3.67583 -0.000180473 3.39598 2.33756e-07H1.12098C0.823934 2.33756e-07 0.539058 0.118 0.329017 0.328041C0.118976 0.538081 0.000976563 0.822958 0.000976562 1.12C0.000976563 1.41704 0.118976 1.70192 0.329017 1.91196C0.539058 2.122 0.823934 2.24 1.12098 2.24H2.37098L3.65973 16.5938C3.75098 17.6287 4.30973 18.7512 5.27348 19.5138C3.53723 21.7313 5.12348 25 7.94848 25C10.2922 25 11.9447 22.6625 11.141 20.4475H17.2722C16.4697 22.66 18.1185 25 20.466 25C21.3664 24.999 22.2297 24.6409 22.8664 24.0042C23.5031 23.3675 23.8612 22.5042 23.8622 21.6038C23.8612 20.7033 23.5031 19.84 22.8664 19.2033C22.2297 18.5666 21.3664 18.2085 20.466 18.2075H7.95598C7.10473 18.2075 6.36348 17.695 6.04348 16.9463L23.9447 15.8938C24.1829 15.8798 24.4104 15.7903 24.5941 15.638C24.7778 15.4858 24.9081 15.2789 24.966 15.0475L27.2422 5.94375C27.2834 5.77851 27.2864 5.60606 27.2511 5.43948C27.2157 5.27291 27.1428 5.11658 27.038 4.98236C26.9332 4.84815 26.7991 4.73957 26.6461 4.66487C26.4931 4.59018 26.3263 4.55132 26.156 4.55125ZM7.94723 22.76C7.64987 22.7462 7.36927 22.6183 7.16373 22.403C6.95819 22.1877 6.84351 21.9014 6.84351 21.6038C6.84351 21.3061 6.95819 21.0198 7.16373 20.8045C7.36927 20.5892 7.64987 20.4613 7.94723 20.4475C8.24458 20.4613 8.52518 20.5892 8.73072 20.8045C8.93626 21.0198 9.05095 21.3061 9.05095 21.6038C9.05095 21.9014 8.93626 22.1877 8.73072 22.403C8.52518 22.6183 8.24458 22.7462 7.94723 22.76ZM20.466 22.76C20.1686 22.7462 19.888 22.6183 19.6825 22.403C19.4769 22.1877 19.3623 21.9014 19.3623 21.6038C19.3623 21.3061 19.4769 21.0198 19.6825 20.8045C19.888 20.5892 20.1686 20.4613 20.466 20.4475C20.7633 20.4613 21.0439 20.5892 21.2495 20.8045C21.455 21.0198 21.5697 21.3061 21.5697 21.6038C21.5697 21.9014 21.455 22.1877 21.2495 22.403C21.0439 22.6183 20.7633 22.7462 20.466 22.76ZM22.9922 13.7063L5.74223 14.7188L5.02973 6.7925H24.721L22.9922 13.705V13.7063Z"
+                                fill="#5A5BAA" />
+                            <defs>
+                            </defs>
+                        </svg>
+                    </button>
+                    <button class="btn__signIn" id="btnSignin">Sign In</button>
+
+                    <div class="cart__overlay" id="cartOverlay" aria-hidden="true"></div><!-- cart section -->
+                    <div class="cart__content" id="cartContent">
+                        <div class="cart__height">
+                            <div class="grid__container">
+                                <button id="closeCart"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                                            fill="#5a5baa" fill-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="cart__header">
+                                    <span class="cart__headline">My Cart</span>
+                                </div>
+                                <div></div>
+                                <div class="cart__wrapper">
+                                    <div class="cart__result">
+                                        <div>
+                                            <p>Subtotal:</p>
+                                            <p id="subtotal"></p>
+                                        </div>
+                                        <div>
+                                            <p>Delivery Fee:</p>
+                                            <p>Free</p>
+                                        </div>
+                                        <div>
+                                            <p>Total</p>
+                                            <p id="total"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cta__sticky">
+                                    <button class="checkout">Proceed to Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="landing__section">
+            <div class="container">
+                <div class="wrapper">
+                    <div>
+                        <h1 class="landing__title">Choosing<br>Quality Food</h1>
+                        <p class="landing__description">"Discover delicious delights for your palate! Indulge in quality
+                            foods that elevate every bite. Explore now for a taste sensation like no other!"</p>
+                        <a class="btn" href="">view products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about__section" id="about">
+            <div class="container">
+                <div class="wrapper">
+                    <div>
+                        <span class="decoration">Welcome</span>
+                        <h2 class="secondary__heading">About<br>SwiftCrave</h2>
+                        <p class="description">"Welcome to SwiftCrave, where delicious food is our specialty! We love
+                            making food that tastes amazing and makes you want more. We've got a bunch of yummy dishes
+                            and treats for every taste. Our food is super tasty and made with top-notch ingredients, so
+                            every bite is full of flavor and makes you happy. Whether you like savory stuff or sweet
+                            treats, SwiftCrave has something for you. Join us for awesome food that'll leave you
+                            smiling. Eat here and you'll be full and happy - that's what SwiftCrave is all about!"
+                        </p>
+                    </div>
+                    <div>
+                        <img src="assets/images/illustration-pasta.png" alt="pasta recipe">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="restaurant__section">
+            <img class="curve" src="assets/images/bg-white-curve.png" alt="">
+            <div class="container spacer">
+                <div class="restaurant__wrapper">
+                    <div style="flex: 1">
+                        <h2 class="secondary__heading">Our<br>Restaurant</h2>
+                        <p class="description">
+                            "Welcome to Our Restaurant! Located in the heart of Amadeo Cavite, we pride ourselves on offering a unique dining experience that combines exceptional cuisine with warm hospitality. Our restaurant is known for its cozy yet vibrant atmosphere, making it the perfect place to unwind and enjoy delicious meals with friends and family.
+                        </p>
+                    </div>
+                    <div style="flex: 1">
+                        <img class="illustration" src="assets/images/image-restaurant.jpg" class="curve"
+                            alt="information about restaurant">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="food__section">
+            <img class="curve" src="assets/images/bg-accentblue-curve.png" alt="">
+            <div class="container spacer">
+                <div class="wrapper">
+                    <div>
+                        <h2 class="secondary__heading">The Food</h2>
+                        <p class="description">We offer a variety of delicious dishes crafted with care and attention to detail. From savory classics to delightful desserts, our menu caters to all tastes. Each dish is prepared using high-quality ingredients to ensure a satisfying dining experience. Come and enjoy our flavorful offerings that are sure to leave you satisfied.
+                        </p>
+                        <a class="btn" href="">order now</a>
+                    </div>
+                    <div>
+                        <img class="illustration" src="assets/images/illustration-foods.jpg" alt="Our Food Recipes">
+                    </div>
+        </section>
+        <section class="people__section">
+            <img class="curve" src="assets/images/bg-white-curve.png" alt="">
+            <div class="container spacer">
+                <div class="restaurant__wrapper">
+                    <div style="flex: 1">
+                        <h2 class="secondary__heading">Our People</h2>
+                        <p class="description"> "Our team at SwiftCrave is all about making you feel at home. From our chefs cooking up tasty meals to our friendly servers taking care of you, every stuff here is dedicated to making sure you have a great time. We're a bunch of welcoming folks who love what we do, and we're here to make your dining experience awesome. Whether it's your first visit or you're a regular, expect to be greeted with a smile and treated like family by our team."
+                        </p>
+                    </div>
+                    <div style="flex: 1">
+                        <img class="illustration" src="assets/images/image-our-people.jpg" alt="Our People">
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img class="curve " src="assets/images/bg-accentblue-curve.png" alt="">
+        <div class="container footer__space">
+            <a href=""><img src="assets/images/icons/logo-white.svg" alt="logo"></a>
+            <div class="footer__wrapper top__spacer">
+                <div class="footer__description">Come hungry, leave happy - that's the SwiftCrave guarantee! Join us for a dining experience that delights the senses and leaves you craving more. Taste the difference with SwiftCrave today!
+                </div>
+                <nav class="footer__navigation">
+                    <ul class="navigation__list nav__wrap" role="list">
+                        <div class="flex-spacer">
+                            <li class="footer__item"><a href="">About Us</a></li>
+                            <li class="footer__item"><a href="">Careers</a></li>
+                            <li class="footer__item"><a href="">Franchising</a></li>
+                            <li class="footer__item"><a href="">Privacy Notice</a></li>
+                        </div>
+                        <div class="flex-spacer">
+                            <li class="footer__item"><a href="">Feedback</a></li>
+                            <li class="footer__item"><a href="">Terms and Condition</a></li>
+                            <li class="footer__item"><a href="">Corporate Information</a></li>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="link__wrapper">
+                    <span class="footer__connect">Connect with us</span>
+                    <div class="social__links">
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_81_123)">
+                                    <path
+                                        d="M40.0001 20.1226C40.0001 9.00756 31.0451 -0.00244141 20.0001 -0.00244141C8.95012 5.85939e-05 -0.00488281 9.00756 -0.00488281 20.1251C-0.00488281 30.1676 7.31012 38.4926 16.8701 40.0026V25.9401H11.7951V20.1251H16.8751V15.6876C16.8751 10.6451 19.8626 7.86006 24.4301 7.86006C26.6201 7.86006 28.9076 8.25256 28.9076 8.25256V13.2026H26.3851C23.9026 13.2026 23.1276 14.7551 23.1276 16.3476V20.1226H28.6726L27.7876 25.9376H23.1251V40.0001C32.6851 38.4901 40.0001 30.1651 40.0001 20.1226Z"
+                                        fill="#F5F5F5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_81_123">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_81_125)">
+                                    <path
+                                        d="M20 0C14.5725 0 13.89 0.025 11.7575 0.12C9.625 0.22 8.1725 0.555 6.9 1.05C5.56461 1.55081 4.35535 2.3385 3.3575 3.3575C2.3385 4.35535 1.55081 5.56461 1.05 6.9C0.555 8.17 0.2175 9.625 0.12 11.75C0.025 13.8875 0 14.5675 0 20.0025C0 25.4325 0.025 26.1125 0.12 28.245C0.22 30.375 0.555 31.8275 1.05 33.1C1.5625 34.415 2.245 35.53 3.3575 36.6425C4.4675 37.755 5.5825 38.44 6.8975 38.95C8.1725 39.445 9.6225 39.7825 11.7525 39.88C13.8875 39.975 14.5675 40 20 40C25.4325 40 26.11 39.975 28.245 39.88C30.3725 39.78 31.83 39.445 33.1025 38.95C34.437 38.4489 35.6454 37.6612 36.6425 36.6425C37.755 35.53 38.4375 34.415 38.95 33.1C39.4425 31.8275 39.78 30.375 39.88 28.245C39.975 26.1125 40 25.4325 40 20C40 14.5675 39.975 13.8875 39.88 11.7525C39.78 9.625 39.4425 8.17 38.95 6.9C38.4492 5.56461 37.6615 4.35535 36.6425 3.3575C35.6446 2.3385 34.4354 1.55081 33.1 1.05C31.825 0.555 30.37 0.2175 28.2425 0.12C26.1075 0.025 25.43 0 19.995 0H20ZM18.2075 3.605H20.0025C25.3425 3.605 25.975 3.6225 28.0825 3.72C30.0325 3.8075 31.0925 4.135 31.7975 4.4075C32.73 4.77 33.3975 5.205 34.0975 5.905C34.7975 6.605 35.23 7.27 35.5925 8.205C35.8675 8.9075 36.1925 9.9675 36.28 11.9175C36.3775 14.025 36.3975 14.6575 36.3975 19.995C36.3975 25.3325 36.3775 25.9675 36.28 28.075C36.1925 30.025 35.865 31.0825 35.5925 31.7875C35.2696 32.6548 34.7581 33.4395 34.095 34.085C33.395 34.785 32.73 35.2175 31.795 35.58C31.095 35.855 30.035 36.18 28.0825 36.27C25.975 36.365 25.3425 36.3875 20.0025 36.3875C14.6625 36.3875 14.0275 36.365 11.92 36.27C9.97 36.18 8.9125 35.855 8.2075 35.58C7.33958 35.2581 6.554 34.7475 5.9075 34.085C5.24318 33.439 4.73082 32.6534 4.4075 31.785C4.135 31.0825 3.8075 30.0225 3.72 28.0725C3.625 25.965 3.605 25.3325 3.605 19.99C3.605 14.6475 3.625 14.02 3.72 11.9125C3.81 9.9625 4.135 8.9025 4.41 8.1975C4.7725 7.265 5.2075 6.5975 5.9075 5.8975C6.6075 5.1975 7.2725 4.765 8.2075 4.4025C8.9125 4.1275 9.97 3.8025 11.92 3.7125C13.765 3.6275 14.48 3.6025 18.2075 3.6V3.605ZM30.6775 6.925C30.3623 6.925 30.0502 6.98708 29.7591 7.10769C29.4679 7.2283 29.2033 7.40508 28.9804 7.62794C28.7576 7.8508 28.5808 8.11538 28.4602 8.40656C28.3396 8.69774 28.2775 9.00983 28.2775 9.325C28.2775 9.64017 28.3396 9.95226 28.4602 10.2434C28.5808 10.5346 28.7576 10.7992 28.9804 11.0221C29.2033 11.2449 29.4679 11.4217 29.7591 11.5423C30.0502 11.6629 30.3623 11.725 30.6775 11.725C31.314 11.725 31.9245 11.4721 32.3746 11.0221C32.8246 10.572 33.0775 9.96152 33.0775 9.325C33.0775 8.68848 32.8246 8.07803 32.3746 7.62794C31.9245 7.17786 31.314 6.925 30.6775 6.925ZM20.0025 9.73C18.6402 9.70875 17.2872 9.95871 16.0224 10.4654C14.7577 10.972 13.6063 11.7252 12.6354 12.6811C11.6645 13.6369 10.8934 14.7764 10.3671 16.0331C9.8408 17.2899 9.56975 18.6388 9.56975 20.0012C9.56975 21.3637 9.8408 22.7126 10.3671 23.9693C10.8934 25.2261 11.6645 26.3656 12.6354 27.3214C13.6063 28.2773 14.7577 29.0305 16.0224 29.5371C17.2872 30.0438 18.6402 30.2938 20.0025 30.2725C22.6989 30.2304 25.2705 29.1298 27.1624 27.2081C29.0544 25.2865 30.1148 22.6979 30.1147 20.0012C30.1148 17.3046 29.0544 14.716 27.1624 12.7944C25.2705 10.8727 22.6989 9.77207 20.0025 9.73ZM20.0025 13.3325C20.8781 13.3325 21.7451 13.505 22.554 13.84C23.363 14.1751 24.098 14.6662 24.7171 15.2854C25.3363 15.9045 25.8274 16.6395 26.1625 17.4485C26.4975 18.2574 26.67 19.1244 26.67 20C26.67 20.8756 26.4975 21.7426 26.1625 22.5515C25.8274 23.3605 25.3363 24.0955 24.7171 24.7146C24.098 25.3338 23.363 25.8249 22.554 26.16C21.7451 26.495 20.8781 26.6675 20.0025 26.6675C18.2342 26.6675 16.5383 25.965 15.2879 24.7146C14.0375 23.4642 13.335 21.7683 13.335 20C13.335 18.2317 14.0375 16.5358 15.2879 15.2854C16.5383 14.035 18.2342 13.3325 20.0025 13.3325Z"
+                                        fill="#F5F5F5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_81_125">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_81_127)">
+                                    <path
+                                        d="M12.565 37.5C27.66 37.5 35.9175 24.9925 35.9175 14.165C35.9208 13.8134 35.9158 13.4617 35.9025 13.11C37.5096 11.9456 38.897 10.5049 40 8.85502C38.4978 9.5157 36.9066 9.95203 35.2775 10.15C36.994 9.12429 38.2795 7.51005 38.895 5.60752C37.2832 6.56433 35.518 7.23505 33.6775 7.59002C32.4405 6.27258 30.8035 5.39982 29.0202 5.10692C27.2369 4.81402 25.4068 5.11733 23.8133 5.96987C22.2199 6.82241 20.952 8.1766 20.2061 9.82267C19.4602 11.4688 19.2779 13.3149 19.6875 15.075C16.4242 14.9122 13.2316 14.0648 10.3171 12.5879C7.40253 11.1111 4.83118 9.03772 2.77 6.50252C1.72395 8.31038 1.40488 10.4485 1.87752 12.483C2.35016 14.5175 3.57911 16.296 5.315 17.4575C4.01352 17.4155 2.74048 17.0659 1.6 16.4375V16.55C1.60318 18.4435 2.25955 20.2778 3.45831 21.7435C4.65707 23.2092 6.3248 24.2163 8.18 24.595C7.47568 24.7892 6.74808 24.8859 6.0175 24.8825C5.5023 24.8879 4.98791 24.8401 4.4825 24.74C5.00598 26.3708 6.02694 27.7967 7.40209 28.8176C8.77724 29.8385 10.4375 30.4033 12.15 30.4325C9.24026 32.7149 5.64811 33.9537 1.95 33.95C1.29825 33.9549 0.646865 33.9173 0 33.8375C3.75355 36.2312 8.11316 37.502 12.565 37.5Z"
+                                        fill="#F5F5F5" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_81_127">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p class="copyright__text">Copyright © 2024, Janray. All rights reserve.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- <div class="cart__container">
+        <div class="cart__overlay"></div>
+        <div class="cart__content">
+            <div class="center__cart">
+                <div class="cart__header">
+                    <span>My Cart</span>
+                </div>
+                <div class="cart__mainContent">
+
+                </div>
+                <div>
+                    <div class="cart__wrap">
+                        <p>Subtotal:</p>
+                        <p id="subtotal"></p>
+                    </div>
+                    <div>
+                        <p>Delivery Fee:</p>
+                        <p>Free</p>
+                    </div>
+                    <div>
+                        <p>Total</p>
+                        <p id="total"></p>
+                    </div> 
+                </div>
+
+                <button>Proceed to Checkout</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="form__root" id="formRoot">
+        <div class="signIn__overlay"></div>
+        <div class="signIn__content">
+            <div class="content center">
+                <div>
+                    <header class="form__header"><img src="assets/images/icons/logo.svg" alt="logo of swiftcrave">
+                    </header>
+                    <button class="btnClose" id="btnClose"><svg width="14" height="15"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                                fill="#5a5baa" fill-rule="evenodd" />
+                        </svg></button>
+                    <div>
+                        <p class="form__title">Sign in with your account</p>
+                        <form class="form__wrapper">
+                            <label for="">
+                                <span class="label__input">Email Address</span>
+                                <div class="input__container">
+                                    <input class="input__box" type="text" placeholder="Enter email address">
+                                </div>
+                            </label>
+                            <label class="form__spacer" for="">
+                                <span class="label__input">Password</span>
+                                <div class="input__container">
+                                    <input class="input__box" type="text" placeholder="Enter password">
+                                </div>
+                            </label>
+                            <button class="loginBtn">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js-components/global.js"></script>
+</body>
+
+</html>

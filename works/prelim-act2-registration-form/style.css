@@ -1,0 +1,329 @@
+:root {
+    --clr-primary-red: #9c2c46;
+    --clr-primary-darkred: #77342e;
+    --clr-neutral-light-yellow: #dfd6bf;
+
+    --clr-dark-cyan: #55b7c5;
+    --clr-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+
+    color: var(--clr-primary-red);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 6rem;
+}
+
+body {
+    background-color: var(--clr-dark-cyan);
+    position: relative;
+    background-image: url(assets/background-cct.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh; 
+}
+
+/* .bg-pattern-top {
+    position: absolute;
+    top: -20%;
+    left: -40%;
+    z-index: -1;
+}
+
+.bg-pattern-bottom {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+
+    z-index: -1;
+} */
+
+
+
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1100px, 100% - 2rem);
+    margin-inline: auto;
+    background-color: white;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.header__section {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.school__details {
+    line-height: 1.30;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.school__name,
+.certificate {
+    font-size: 1.20rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.school__year {
+    color: hsl(0, 0%, 12%);
+    border-bottom: 1px solid hsl(0, 0%, 12%);
+    padding-inline: 1rem;
+}
+
+.certificate {
+    font-size: 1.10rem;
+}
+
+.spacer {
+    padding-top: 2rem;
+}
+
+.logo__tagaytay {
+    margin-right: 30px;
+}
+
+.h3 {
+    font-size: 1.10rem;
+}
+
+table {
+    width: 100%;
+    /* padding-left: 1rem; */
+    border: 1px solid var(--clr-primary-red);
+    border-collapse: collapse;
+}
+
+.table__information td,
+.table__information th,
+.table__information caption {
+    line-height: 1.25;
+}
+
+.table__information th {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.table__details th {
+    text-align: left;
+}
+
+.table__information caption {
+    padding-top: .25rem;
+}
+
+.table__information td {
+    color: black;
+    padding-left: .5rem;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+.row__first td,
+.row__first th {
+    padding-top: .5rem;
+}
+
+.row__last td,
+.row__last th {
+    padding-bottom: 1rem;
+}
+
+caption {
+    padding-block: .10rem;
+    background-color: var(--clr-primary-darkred);
+    color: white;
+}
+
+.table__header th {
+    border-right: 1px solid var(--clr-primary-red);
+    border-bottom: 1px solid var(--clr-primary-red);
+
+}
+
+.table__information {
+    border-bottom: none;
+}
+
+.table__content [data-cell] {
+    border-right: 1px solid var(--clr-primary-red);
+    line-height: 1.3;
+    color: black;
+}
+
+.billing__information [data-cell] {
+    color: black;
+}
+
+[data-cell="section"],
+[data-cell="course code"] {
+    padding-left: 1rem;
+
+}
+
+[data-cell="course description"] {
+    padding-left: .5rem;
+}
+
+[data-cell="units"] {
+    text-align: center;
+}
+
+.table__content {
+    border-bottom: none;
+}
+
+[data-cell="course"]:first-child,
+[data-cell="course code"]:first-child,
+[data-cell="course description"]:first-child,
+[data-cell="units"]:first-child,
+[data-cell="schedule"]:first-child {
+    padding-top: 2rem;
+}
+
+
+.table__content>tbody>tr:nth-child(2)>td {
+    padding-top: 1.2rem;
+}
+
+.table__content>tbody>tr:last-child>td {
+    padding-bottom: 15rem;
+}
+
+.table__details {
+    border-top: 1px solid var(--clr-primary-darkred);
+    background-color: var(--clr-neutral-light-yellow);
+}
+
+.table__details [data-cell="total subject"],
+.table__details [data-cell="total units"],
+.table__details [data-cell="total lab units"],
+.table__details [data-cell="total credits"] {
+    font-weight: 600;
+    color: black;
+}
+
+
+
+
+
+
+
+.no__border {
+    border: none;
+}
+
+.scholarship {
+    text-align: center;
+    border-bottom: 1px solid var(--clr-primary-red);
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: black;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--clr-primary-red);
+}
+
+.assessment__fees tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 2.5rem;
+}
+
+/* .assessment__fees tr td:nth-child(1){
+    padding-left: .5rem;
+} */
+
+.fee__label,
+.payment__label {
+    padding-left: 1.75rem;
+    font-size: 0.9375rem;
+}
+
+.table__headings {
+    text-transform: uppercase;
+    padding-left: .5rem;
+}
+
+span.staff__name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+ul,
+ol {
+    list-style-position: outside;
+}
+
+li {
+    padding-left: .5rem;
+    font-size: 0.875rem;
+    margin-left: 32px;
+    text-align: justify;
+}
+
+.spacer-inline {
+    padding-inline: 16px;
+    padding-bottom: 8px;
+}
+
+[data-cell="fourth payment"],
+.bottom-spacer {
+    padding-bottom: 4rem;
+}
+
+.table__bills [data-cell] {
+    text-align: center;
+}
+
+.billing__information [data-cell],
+[data-cell="total fee"] {
+    font-size: 0.9375rem;
+}
+
+.staff-position {
+    text-align: center;
+    font-size: 0.9375rem;
+}
+
+.fs-15 {
+    font-size: 0.9375rem;
+}

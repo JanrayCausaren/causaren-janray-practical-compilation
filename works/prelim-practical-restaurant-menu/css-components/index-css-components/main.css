@@ -1,0 +1,58 @@
+.landing__section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/image-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.landing__title {
+    font-size: 4rem;
+    color: var(--clr-neutral-white);
+    line-height: 1.25;
+    font-weight: var(--weight-bold);
+    padding-bottom: 1.875rem;
+}
+
+.landing__description {
+    color: var(--clr-neutral-white-accent);
+    max-width: 50ch;
+    padding-bottom: 2.5rem;
+}
+
+/* ABOUT SECTION */
+.about__section {
+    padding-block: 5rem 3rem;
+}
+
+/* OUR RESTAURANT SECTION */
+.restaurant__section {
+    background-color: var(--clr-neutral-light-blue);
+    padding-bottom: 5rem;
+}
+
+.restaurant__wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/* FOOD SECTION */
+
+.food__section {
+    padding-bottom: 5rem;
+}
+
+/* PEOPLE SECTION */
+.people__section {
+    background-color: var(--clr-neutral-light-blue);
+    padding-bottom: 9rem;
+}
+
+
+
+

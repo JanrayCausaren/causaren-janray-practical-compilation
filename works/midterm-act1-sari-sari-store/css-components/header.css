@@ -1,0 +1,59 @@
+.header {
+    background-color: var(--clr-primary-dark-blue);
+    padding-block: 1.125rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigations{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.navigations .button {
+    background: transparent;
+    border: none;
+}
+
+.btn__signIn {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    position: relative;
+    color: var(--clr-neutral-white);
+}
+
+.btnText::before {
+    content: 'Sign In';
+    position: absolute;
+    font-size: 0.625rem;
+    top: 5%;
+    font-weight: 400;
+}
+
+.btnText {
+    font-weight: 600;
+    font-size: 0.8125rem;
+    /*13px*/
+    line-height: 1.3;
+}
+
+.btn__cart{
+    display: flex;
+    align-items: end;
+    color: var(--clr-neutral-white);
+    font-weight: 600;
+    gap: 8px;
+}
+
+.total__amount{
+    line-height: 1.3;
+}
